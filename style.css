@@ -1,0 +1,210 @@
+/* General Reset and Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 50px; /* Extra space for footer */
+  overflow-x: hidden;
+}
+
+/* Live Background Video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li {
+  font-size: 1.5em;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+/* Header Section Styling */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.header h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 2s ease-out;
+}
+
+.header p {
+  font-size: 1.8em;
+  color: #aaa;
+  margin-top: 20px;
+  animation: fadeInUp 2s ease-out;
+}
+
+/* Section Styling */
+section {
+  padding: 80px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Project Section Styling */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.project h3 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.project p {
+  font-size: 1.4em;
+  color: #bbb;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1.2em;
+}
+
+/* Button Styling */
+button {
+  background: linear-gradient(45deg, #f39c12, #c0392b);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #c0392b, #f39c12);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Name Styling */
+.header-content h1 {
+  font-size: 4em;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 2s ease-out, gradientShift 5s infinite;
+  background: linear-gradient(90deg, violet, indigo, blue, darkblue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+}
+
+/* Animation for Custom Gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

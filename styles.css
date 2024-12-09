@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    overflow-y: auto;
+}
+
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+header .name span {
+    color: #f9c802;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: #2575fc;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    display: inline-block;
+    background: #2575fc;
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 4px;
+}
+
+.projects .project {
+    background: #fff;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    width: 200px;
+    background: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar ul li {
+    margin: 1em 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    display: block;
+    padding: 0.5em 0;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: #2575fc;
+}
+
+/* Animation Styles */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

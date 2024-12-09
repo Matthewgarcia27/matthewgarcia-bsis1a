@@ -1,0 +1,192 @@
+/* General Reset and Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12;
+}
+
+/* About Section */
+#about {
+  text-align: center;
+  padding: 100px 20px 50px;
+}
+
+.about-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeInDown 1.5s ease;
+  text-transform: uppercase;
+}
+
+.about-content p {
+  font-size: 1.5em;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 50px;
+  animation: fadeInUp 2s ease;
+}
+
+/* Profile Picture Styles */
+.profile-pic-container {
+  margin: 30px auto 50px;
+  width: 200px;
+  height: 200px;
+  border: 5px solid transparent;
+  border-radius: 15px;
+  border-image: linear-gradient(45deg, #f39c12, #c0392b, #8e44ad, #2980b9);
+  border-image-slice: 1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  animation: borderAnimation 3s linear infinite;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Contact Info */
+.contact-info h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin: 15px 0;
+}
+
+.contact-info ul li a {
+  color: #f39c12;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact-info ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-shadow: 0 0 10px #f39c12;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 10;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes borderAnimation {
+  0%, 100% {
+    border-image-source: linear-gradient(45deg, #f39c12, #c0392b, #8e44ad, #2980b9);
+  }
+  50% {
+    border-image-source: linear-gradient(45deg, #2980b9, #8e44ad, #c0392b, #f39c12);
+  }
+}
+
+
+/* General Text Color - Orange */
+body, p, h1, h2, h3, h4, h5, h6, a, ul li {
+  color: #f39c12; /* Orange */
+}
+
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

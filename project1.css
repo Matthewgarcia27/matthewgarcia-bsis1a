@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-page {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    animation: slide-in 1s ease-out;
+}
+
+h1, p, a, button {
+    margin: 1em 0;
+}
+
+/* Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-In Animation */
+@keyframes slide-in {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Button Styles */
+#alertButton {
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#alertButton:hover {
+    background: #6a11cb;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #2575fc;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background: #2575fc;
+    color: #fff;
+}
